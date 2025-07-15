@@ -1,4 +1,4 @@
-<?php
+s<?php
 // Q1 変数と文字列
 $name = "尾崎";
 echo "私の名前は「" . $name . "」です。";
@@ -38,11 +38,11 @@ $pref_array = ["東京都", "千葉県", "埼玉県", "神奈川県", "栃木県
 echo $pref_array[2] . "と" . $pref_array[3] . "は関東地方の都道府県です。";
 
 // Q7 連想配列-1
-$pref_cap_array = ["東京都"=>"新宿区", 
-                    "千葉県"=>"千葉市", 
-                    "埼玉県"=>"さいたま市", 
-                    "神奈川県"=>"横浜市", 
-                    "栃木県"=>"宇都宮市", 
+$pref_cap_array = ["東京都"=>"新宿区",
+                    "千葉県"=>"千葉市",
+                    "埼玉県"=>"さいたま市",
+                    "神奈川県"=>"横浜市",
+                    "栃木県"=>"宇都宮市",
                     "群馬県"=>"前橋市"];
 
 foreach ($pref_cap_array as $cap) {
@@ -52,7 +52,7 @@ foreach ($pref_cap_array as $cap) {
 
 // Q8 連想配列-2
 foreach ($pref_cap_array as $pref => $cap) {
-    if ($pref == "埼玉県") {
+    if ($pref === "埼玉県") {
         echo $pref . "の県庁所在地は、" . $cap . "です。";
     }
 }
@@ -62,7 +62,7 @@ $pref_cap_array['愛知県'] = '名古屋市'; //中部
 $pref_cap_array['大阪府'] = '大阪市'; //近畿
 
 foreach ($pref_cap_array as $pref => $cap) {
-    if ($pref == '愛知県' or $pref == '大阪府') {
+    if ($pref === '愛知県' or $pref === '大阪府') {
         echo $pref . "は関東地方ではありません。";
         echo PHP_EOL;
     } else {
@@ -113,16 +113,13 @@ function evaluateGrade($result)
         case 'A':
         case 'B':
             return "合格です。\n";
-            break;
-        
+
         case 'C':
             return "合格ですが追加課題があります。\n";
-            break;
-        
+
         case 'D':
             return "不合格です。\n";
-            break;
-            
+
         default:
             return "判定不明です。講師に問い合わせてください。\n";
             break;
